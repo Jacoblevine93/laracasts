@@ -1,0 +1,7 @@
+<?php
+
+ return [
+   'stripe' => [
+     'private' => ''
+   ]
+ ];
