@@ -24,24 +24,19 @@ Route::get('/', function (UserRepository $users) {
   return view('welcome');
 });
 
-// Route::get('/', function () {
-//   dd(app('example'));
+
+// Route::resource('/projects', 'ProjectsController')->middleware('can:update,project')
 //
-//   return view('welcome');
-// });
-
-Route::resource('/projects', 'ProjectsController')->middleware('can:update,project');
-
-Route::get('/about', 'PagesController@about');
-
-Route::get('/contact', 'PagesController@contact');
-
-Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
-
-Route::post('completed-tasks/{task}', 'CompletedTasksController@store');
-
-Route::delete('completed-tasks/{task}', 'CompletedTasksController@destroy');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/about', 'PagesController@about');
+//
+// Route::get('/contact', 'PagesController@contact');
+//
+// Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+//
+// Route::post('completed-tasks/{task}', 'CompletedTasksController@store');
+//
+// Route::delete('completed-tasks/{task}', 'CompletedTasksController@destroy');
+//
+// Auth::routes();
+//
+// Route::get('/home', 'HomeController@index')->name('home');
